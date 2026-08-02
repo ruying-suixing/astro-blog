@@ -1,5 +1,5 @@
 html {
-  font-family: 'Century Gothic', 'Satoshi', sans-serif;
+  font-family: 'JetBrainsMono', 'Century Gothic', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -246,4 +246,32 @@ sup {
 
 .footnotes a[href^="#fnref"]:hover {
   opacity: 1;
+}
+
+/* ============Waline 评论系统的自定义样式 ============*/
+/* 1. 评论输入框：背景图精准控制 */
+#wl-edit {
+  background: url('https://image.rusin7.com/file/Mjo1bViM.gif') no-repeat right bottom !important;
+  background-size: 25% auto !important;
+  padding: 20px !important;
+}
+
+/* 2. 手机端适配：屏幕窄的时候，把背景图再缩小 */
+@media (max-width: 768px) {
+  #wl-edit {
+    background-size: 35% auto !important;
+  }
+}
+
+/* 2. 输入框圆角、边框美化 */
+#wl-edit {
+  border-radius: 16px !important;
+  border: 1px solid #333 !important;
+  line-height: 1.4 !important; /* 行高，让多行文案更宽松 */
+}
+
+/* 聚焦输入时可切换图片/隐藏，可选加 */
+#wl-edit:focus {
+  background-image: none; 
+  /* background-position: right bottom; */
 }

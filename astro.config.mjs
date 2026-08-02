@@ -30,7 +30,8 @@ import {
 } from './src/plugins/shiki-transformers.ts'
 import config from './src/site.config.ts'
 
-const platform = process.env.DEPLOYMENT_PLATFORM || 'vercel'
+// 👉 只改这一段，其他完全不动
+const platform = /** @type {'vercel' | 'cloudflare' | 'github'} */ ('vercel')
 const isCloudflare = platform === 'cloudflare'
 const isGithubPages = platform === 'github'
 
@@ -60,31 +61,17 @@ export default defineConfig({
   },
 
   integrations: [
-    // astro-axi will automatically add sitemap, mdx & tailwind
-    // sitemap(),
-    // mdx(),
-    // tailwind({ applyBaseStyles: false }),
     AstroAxiIntegration(config),
-    // (await import('@playform/compress')).default({
-    //   SVG: false,
-    //   Exclude: ['index.*.js']
-    // }),
-
-    // Temporary fix vercel adapter
-    // static build method is not needed
     outputCopier({
       integ: ['sitemap', 'pagefind']
     })
   ],
-  // root: './my-project-directory',
 
-  // Prefetch Options
   prefetch: true,
-  // Server Options
   server: {
     host: true
   },
-  // Markdown Options
+
   markdown: {
     remarkPlugins: [remarkMath, remarkGfm],
     rehypePlugins: [
@@ -104,7 +91,6 @@ export default defineConfig({
       footnoteBackLabel: '返回内容',
       footnoteBackContent: '↑'
     },
-    // https://docs.astro.build/en/guides/syntax-highlighting/
     shikiConfig: {
       themes: {
         light: 'github-light',
@@ -120,12 +106,7 @@ export default defineConfig({
       ]
     }
   },
+
   vite: {
-    // plugins: [
-    //   visualizer({
-    //     emitFile: true,
-    //     filename: 'stats.html'
-    //   })
-    // ]
   }
 })

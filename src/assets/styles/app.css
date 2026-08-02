@@ -2,41 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 霞鹜文楷 - 常规 */
 @font-face {
-  font-family: 'Century Gothic';
-  src: url('/fonts/centurygothic.ttf') format('truetype');
+  font-family: 'LXGW WenKai';
+  src: url('/fonts/LXGWWenKai-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
+/* 霞鹜文楷 - 粗体 */
 @font-face {
-  font-family: 'Century Gothic';
-  src: url('/fonts/centurygothic_bold.ttf') format('truetype');
+  font-family: 'LXGW WenKai';
+  src: url('/fonts/LXGWWenKai-Medium.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
+/* 霞鹜文楷 - 细体（可选） */
 @font-face {
-  font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-Variable.ttf');
+  font-family: 'LXGW WenKai';
+  src: url('/fonts/LXGWWenKai-Light.ttf') format('truetype');
+  font-weight: 300;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
+/* JetBrains Mono - 常规 */
 @font-face {
-  font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-VariableItalic.ttf');
-  font-style: italic;
-  font-display: fallback;
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
+/* JetBrains Mono - 粗体 */
 @font-face {
-  font-family: 'ComicShannsMono';
-  src: url('/fonts/ComicShannsMonoNerdFontPropo-Regular.otf');
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrainsMono-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* JetBrains Mono - 斜体 */
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrainsMono-Italic.woff2') format('woff2');
+  font-weight: normal;
   font-style: italic;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @layer base {
@@ -61,7 +78,12 @@
     --input: 240 5.9% 90%;
     --ring: 240 5.9% 10%;
     --radius: 0.5rem;
+    
+    /* 添加字体变量 */
+    --font-sans: 'LXGW WenKai', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   }
+  
   .dark {
     --background: 240 20.54% 5.2%;
     --foreground: 0 0% 98%;
@@ -89,9 +111,26 @@
   * {
     @apply border-border;
   }
+  
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
   }
+  
+  /* 代码块和行内代码使用 JetBrains Mono */
+  code, pre, kbd, samp {
+    font-family: var(--font-mono);
+  }
+  
+  /* 确保代码块有合适的样式 */
+  pre {
+    font-family: var(--font-mono);
+  }
+  
+  code {
+    font-family: var(--font-mono);
+  }
+  
   a {
     @apply transition-colors hover:text-primary;
   }
