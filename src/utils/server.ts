@@ -6,9 +6,23 @@ export const prod = import.meta.env.PROD
 
 /** Note: this function filters out draft posts based on the environment */
 export async function getBlogCollection() {
-  return await getCollection('blog', ({ data }) => {
+  const posts = await getCollection('blog', ({ data }) => {
     // Not in production & draft is not false
     return prod ? !data.draft : true
+  })
+  
+  // ✅ 为没有 category 的文章添加默认分类 "other"
+  return posts.map(post => {
+    if (!post.data.category) {
+      return {
+        ...post,
+        data: {
+          ...post.data,
+          category: 'other'
+        }
+      }
+    }
+    return post
   })
 }
 

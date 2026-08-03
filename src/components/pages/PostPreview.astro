@@ -55,7 +55,7 @@ function getLocalizedUrl(locale: string | undefined, path: string) {
       !detailed && 'sm:flex-row',
       detailed && data.heroImage && 'max-md:pt-24'
     )}
-    href={getLocalizedUrl(Astro.currentLocale, `/blog/${id}`)}
+    href={getLocalizedUrl(Astro.currentLocale, `/article/${id}`)}
     data-astro-prefetch
   >
     {
