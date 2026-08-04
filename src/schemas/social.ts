@@ -18,6 +18,7 @@ export const SocialLinksSchema = () =>
         const label = {
           github: 'GitHub',
           gitlab: 'GitLab',
+          gitee: 'Gitee',
           discord: 'Discord',
           youtube: 'YouTube',
           instagram: 'Instagram',
