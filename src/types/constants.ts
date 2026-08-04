@@ -1,6 +1,7 @@
 export const socialLinks = [
   'github',
   'gitlab',
+  'gitee',
   'discord',
   'youtube',
   'instagram',

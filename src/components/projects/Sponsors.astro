@@ -10,14 +10,17 @@ interface Props {
   }[]
 }
 const { class: className, sponsors, ...props } = Astro.props
+
+// 判断是否为英文页面
+const isEnglish = Astro.url.pathname.includes('/en/')
 ---
 
 <div class={cn('border px-3 sm:px-4 py-2 rounded-xl', className)} {...props}>
   <table class='my-0'>
     <tr class='text-start'>
-      <th>Name</th>
-      <th>Amount</th>
-      <th>Date</th>
+      <th>{isEnglish ? 'Name' : '姓名'}</th>
+      <th>{isEnglish ? 'Amount' : '金额'}</th>
+      <th>{isEnglish ? 'Date' : '日期'}</th>
     </tr>
     {
       sponsors.map((sponsor) => (

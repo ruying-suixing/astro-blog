@@ -13,23 +13,23 @@ const headings = [
   { depth: 2, slug: 'about-me', text: 'About Me' },
   { depth: 2, slug: 'research-interests', text: 'Research Interests' },
   { depth: 2, slug: 'publications', text: 'Publications' },
-  { depth: 2, slug: 'open-source-projects', text: 'Open-source Projects' }
+  { depth: 2, slug: 'open-source-projects', text: 'Open Source Projects' }
 ]
 ---
 
 <PageLayout title='Academic' {headings} info={{ slug: '/academic', hideComment: true }}>
   <h2 id='about-me'>About Me<a class='anchor' href='#about-me'>#</a></h2>
   <p>
-    Introduce your academic background here. For example: I am an undergraduate/graduate student at [University Name], currently interning or studying at [Lab Name], supervised by Professor [Professor Name]. My research interest is [Research Interest].
+    I study at JCSY and SH, based in ZJ, preparing for the CSP.
   </p>
 
-  <p>My research philosophy: Write your perspective and attitude towards research here.</p>
+  <p>CSP-J target: 2=, CSP-S target: advance to the final round!</p>
   <p>
-    You can describe your research motivation, goals, and specific problems you are currently focusing on in detail.
+    Intense academic work in progress, do not disturb.
   </p>
 
-  <p>Here is my academic CV, feel free to download it.</p>
-  <Button title='Download CV' class='w-fit' href='#' target='_blank'>
+  <p>This is the NOI syllabus, feel free to download.</p>
+  <Button title='Download Syllabus' class='w-fit' href='https://www.noi.cn/upload/resources/file/2025/04/18/NOI_Syllabus_Edition_2025.pdf' target='_blank'>
     <Icon class='size-5' name='download' slot='before' />
   </Button>
   <h2 id='research-interests'>
@@ -39,14 +39,14 @@ const headings = [
     {
       [
         {
-          title: 'Research Interest 1',
-          description: 'Detailed description of this research interest, including keywords, etc.',
-          icon: 'ros'
+          title: 'C++',
+          description: 'Trees, graph theory, dynamic programming, data structures.',
+          icon: 'pytorch'
         },
         {
-          title: 'Research Interest 2',
-          description: 'Detailed description of this research interest, including keywords, etc.',
-          icon: 'pytorch'
+          title: 'Web',
+          description: 'Cybersecurity, website building, frontend frameworks.',
+          icon: 'huggingface'
         }
       ].map((interest) => (
         <div class='group relative overflow-hidden rounded-xl border border-border bg-card p-4 transition-all hover:border-foreground/25 hover:shadow-md'>
@@ -73,35 +73,33 @@ const headings = [
     publications={[
       {
         title:
-          'Paper Title: Enter your paper title here',
+          'Recreating the Luogu Plugin in Hexo',
         authors: [
-          { name: 'Author 1', isEqual: true },
-          { name: 'Author 2', isMe: true },
-          { name: 'Author 3', isCoreContributor: true }
+          { name: '_ruyingsuixing_', isMe: true }
         ],
-        venue: 'Conference or Journal Name (e.g., CVPR, ECCV)',
-        year: '202X',
+        venue: 'Luogu Blog',
+        year: '2026',
         type: 'conference',
         abstract:
-          'Enter the paper abstract here. Briefly introduce the research background, methodology, and main contributions of the paper.',
+          'Recreating Luogu\'s markdown-it parsing and CSS in Hexo via custom markedjs and styles.',
         links: [
-          { type: 'website', href: '#' },
-          { type: 'arxiv', href: '#' }
+          { type: 'Luogu', href: 'https://www.luogu.com.cn/article/79x8skck' },
+          { type: 'This Site', href: '/article/luogu-plugin-in-hexo' }
         ],
         status: 'published'
       }
     ]}
   />
   <h2 id='open-source-projects'>
-    Open-source Projects<a class='anchor' href='#open-source-projects'>#</a>
+    Open Source Projects<a class='anchor' href='#open-source-projects'>#</a>
   </h2>
   <ResearchProjectSection
     projects={[
       {
-        title: 'Project Name',
+        title: 'No projects yet',
         description:
-          'Project Description: Briefly introduce the function and purpose of this open-source project.',
-        category: 'Project Category',
+          'No projects yet',
+        category: 'None',
         status: 'active',
         links: [
           { type: 'github', href: '#', label: 'Code' }

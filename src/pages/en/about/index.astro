@@ -6,7 +6,7 @@ import { Comment } from '@/components/advanced'
 import { Button, DistributionSection, Spoiler } from '@/components/user'
 
 const headings = [
-  { depth: 2, slug: 'distribution', text: 'Distribution' },
+  { depth: 2, slug: 'distribution', text: 'Child Websites' },
   { depth: 2, slug: 'tools', text: 'Tools' },
   { depth: 2, slug: 'copyright', text: 'Copyright' },
   { depth: 2, slug: 'theme', text: 'Theme' }
@@ -14,34 +14,32 @@ const headings = [
 
 const distributions = [
   {
-    title: 'Mirror 1',
-    url: 'example.com',
+    title: 'Homepage',
+    url: 'https://www.rusin7.com',
     platform: 'Vercel'
   },
   {
-    title: 'Mirror 2',
-    url: 'blog.example.com',
-    platform: 'Vultr'
+    title: 'OJ',
+    url: 'https://www.rusin.top',
+    platform: 'cloudflare'
   }
 ]
 ---
 
 <PageLayout title='About' {headings} info='/about'>
-  <p>Your Profession / <Spoiler>Some fun facts about you</Spoiler></p>
+  <p>OIer / Personality: <Spoiler>ENFJ-A</Spoiler></p>
+  <p><img src="https://image.rusin7.com/file/jpxNnXhz.svg" alt="1"></p>
+  <Button title='Sponsor Me' class='w-fit' href='https://www.luogu.com.cn/user/1620655' style='ahead' />
   <p>
-    Write your personal introduction here. You can introduce your educational background, research interests, work experience, or hobbies.
+    Hello, I am an OIer. Welcome to my blog! My motto: <Spoiler>Experience personally, practice for life.</Spoiler>
   </p>
-  <Button title='Sponsor Me' class='w-fit' href='/en/projects#sponsorship' style='ahead' />
-  <h2 id='distribution'>Website Distribution<a class='anchor' href='#distribution'>#</a></h2>
+  <Button title='Sponsor Me' class='w-fit' href='/projects#sponsorship' style='ahead' />
+  <h2 id='distribution'>Distribution<a class='anchor' href='#distribution'>#</a></h2>
   <p>
-    To provide a better browsing experience and improved reliability, this site is deployed across
-    multiple platforms. You can choose the mirror site that best suits your needs:
+    This site is deployed on multiple platforms. You can choose a suitable site to visit:
   </p>
   <DistributionSection class='mb-8 mt-6' {distributions} />
-  <p>
-    If you encounter access issues, we recommend trying another mirror site. All sites are kept
-    synchronized and updated.
-  </p>
+  <p>If you encounter access issues, we recommend trying other mirror sites. All sites are synchronized with the latest content.</p>
   <h2 id='tools'>Tools<a class='anchor' href='#tools'>#</a></h2>
   <ToolSection
     class='mb-5'
@@ -54,16 +52,16 @@ const distributions = [
         icon: import('@/assets/tools/vscode.svg?raw')
       },
       {
-        name: 'Cursor',
-        description: 'AI-powered Code Editor',
-        href: 'https://cursor.com',
-        icon: import('@/assets/tools/cursor.svg?raw')
+        name: 'Deepseek',
+        description: 'AI-powered Code Generator',
+        href: 'https://www.deepseek.com',
+        icon: import('@/assets/tools/deepseek.svg?raw')
       },
       {
-        name: 'Chrome',
+        name: 'Edge',
         description: 'Web Browser',
-        href: 'https://www.google.com/chrome/',
-        icon: import('@/assets/tools/chrome.svg?raw')
+        href: 'https://explore.microsoft.com/zh-cn/edge',
+        icon: import('@/assets/tools/edge.svg?raw')
       },
       {
         name: 'Ubuntu',
@@ -75,17 +73,12 @@ const distributions = [
   />
   <h2 id='copyright'>Copyright<a class='anchor' href='#copyright'>#</a></h2>
   <p>
-    Unless otherwise stated, all original content and site design are licensed under the <a
+    As you can see, all original content and the overall design of this site, unless otherwise noted, are licensed under the <a
       href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a
-    > license. This means you are free to share, copy, or adapt the work within the license scope, as
-    long as you give appropriate credit and **do not use it for commercial purposes**.
+    > license. This means you are free to share and adapt the content within the scope of the license, but you must give appropriate credit, provide a link to the license, and indicate if changes were made. You may not use the material for commercial purposes.
   </p>
   <p>
-    Most blog cover images on this site are sourced from publicly available artworks on Pixiv and
-    are linked to the original (Hero Image). Other images, icons, trademarks, or materials used on
-    this site belong to their respective rights holders, regardless of whether a © or ™ is
-    explicitly shown. No copyright infringement is intended. If you believe any content on this site
-    infringes upon your rights, please contact me — I will promptly remove it.
+    Some images, trademarks, logos, and related intellectual property used on this site, including cover images, are sourced from the internet. Whether or not marked with © or ™, they belong to their respective rights holders. We do not intend to infringe on their works, trademarks, or copyrights. If any content on this site infringes upon your rights, please contact me and I will remove it as soon as possible.
   </p>
   <svg width='160' height='56' viewBox='0 0 160 56' xmlns='http://www.w3.org/2000/svg'>
     <g transform='scale(1.3333333)'>
@@ -169,7 +162,7 @@ const distributions = [
   </svg>
   <h2 id='theme'>Theme<a class='anchor' href='#theme'>#</a></h2>
   <p>
-    This theme, Astro-Axi, is heavily modified based on Astro's <a
+    This theme is heavily modified based on Astro's <a
       href='https://astro-pure.js.org/docs '>Pure</a
     >, <a href='https://github.com/chrismwilliams/astro-theme-cactus '>Cactus</a>, and <a
       href='https://astro-theme-resume.vercel.app/ '>Resume</a
