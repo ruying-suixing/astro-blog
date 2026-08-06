@@ -5,13 +5,14 @@ export const HeaderMenuSchema = () =>
     .array(
       z.object({
         title: z.string(),
+        titleEn: z.string().optional(), // 新增英文标题
         link: z.string()
       })
     )
     .default([
-      { title: 'Blog', link: '/blog' },
-      { title: 'Projects', link: '/projects' },
-      { title: 'Links', link: '/links' },
-      { title: 'About', link: '/about' }
+      { title: '博客', titleEn: 'Blog', link: '/blog' },
+      { title: '项目', titleEn: 'Projects', link: '/projects' },
+      { title: '链接', titleEn: 'Links', link: '/links' },
+      { title: '关于', titleEn: 'About', link: '/about' }
     ])
     .describe('The header menu items for your site.')

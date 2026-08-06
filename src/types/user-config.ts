@@ -9,6 +9,7 @@ import { IntegrationConfigSchema } from './integrations-config'
 export const UserConfigSchema = z.object({
   // 基础配置
   title: z.string(),
+  titleEn: z.string(),
   author: z.string(),
   author_en: z.string().optional(),
   description: z.string().optional(),

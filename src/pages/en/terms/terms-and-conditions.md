@@ -2,30 +2,30 @@
 layout: '@/layouts/IndividualPage.astro'
 
 title: 'Terms and Conditions'
-description: 'Effective date: 2030-12-31'
+description: 'Effective date: 2026-08-06'
 language: 'En'
 back: '/terms/list'
 ---
 
 <h2 style="text-align: center;"><b>TERMS AND CONDITIONS</b></h2>
 
-<p>Effective date: 2030-12-31</p>	 	 
+<p>Effective date: 2026-08-06</p>	 	 
 
 <p>1. <b>Introduction</b></p>	 	 
 
-<p>Welcome to <b>[Your Name]</b> (“Company”, “we”, “our”, “us”)!</p>	 	 
+<p>Welcome to <b>ruyingsuixing</b> (“Company”, “we”, “our”, “us”)!</p>	 	 
 
-<p>These Terms of Service (“Terms”, “Terms of Service”) govern your use of our website located at <b>[Your Domain]</b> (together or individually “Service”) operated by <b>[Your Name]</b>.</p>	 	 
+<p>These Terms of Service (“Terms”, “Terms of Service”) govern your use of our website located at <b>blog.rusin7.com</b> (together or individually “Service”) operated by <b>ruyingsuixing</b>.</p>	 	 
 
 <p>Our Privacy Policy also governs your use of our Service and explains how we collect, safeguard and disclose information that results from your use of our web pages. Please read it here <a href="/en/terms/privacy-policy">Privacy Policy</a>.</p>	 	 
 
 <p>Your agreement with us includes these Terms and our Privacy Policy (“Agreements”). You acknowledge that you have read and understood Agreements, and agree to be bound of them.</p>	 	 
 
-<p>If you do not agree with (or cannot comply with) Agreements, then you may not use the Service, but please let us know by emailing at <b>[Your Email]</b> so we can try to find a solution. These Terms apply to all visitors, users and others who wish to access or use Service.</p>	 	 
+<p>If you do not agree with (or cannot comply with) Agreements, then you may not use the Service, but please let us know by emailing at <b> i@rusin7.com </b> so we can try to find a solution. These Terms apply to all visitors, users and others who wish to access or use Service.</p>	 	 
 
 <p>2. <b>Communications</b></p>	 	 
 
-<p>By using our Service, you agree to subscribe to newsletters, marketing or promotional materials and other information we may send. However, you may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or by emailing at [Your Email].</p>	 	 
+<p>By using our Service, you agree to subscribe to newsletters, marketing or promotional materials and other information we may send. However, you may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or by emailing at  i@rusin7.com .</p>	 	 
 
 <p>3. <b>Contests, Sweepstakes and Promotions</b></p>	 	 
 
@@ -33,7 +33,7 @@ back: '/terms/list'
 
 <p>4. <b>Content</b></p>	 	 
 
-<p>Content found on or through this Service are the property of [Your Name] or used with permission. You may not distribute, modify, transmit, reuse, download, repost, copy, or use said Content, whether in whole or in part, for commercial purposes or for personal gain, without express advance written permission from us.</p>	 	 
+<p>Content found on or through this Service are the property of ruyingsuixing or used with permission. You may not distribute, modify, transmit, reuse, download, repost, copy, or use said Content, whether in whole or in part, for commercial purposes or for personal gain, without express advance written permission from us.</p>	 	 
 
 <p>5. <b>Prohibited Uses</b></p>	 	 
 
@@ -81,13 +81,13 @@ back: '/terms/list'
 
 <p>8. <b>Intellectual Property</b></p>	 	 
 
-<p>Service and its original content (excluding Content provided by users), features and functionality are and will remain the exclusive property of [Your Name] and its licensors. Service is protected by copyright, trademark, and other laws of  and foreign countries. Our trademarks may not be used in connection with any product or service without the prior written consent of [Your Name].</p>	 	 
+<p>Service and its original content (excluding Content provided by users), features and functionality are and will remain the exclusive property of ruyingsuixing and its licensors. Service is protected by copyright, trademark, and other laws of  and foreign countries. Our trademarks may not be used in connection with any product or service without the prior written consent of ruyingsuixing.</p>	 	 
 
 <p>9. <b>Copyright Policy</b></p>	 	 
 
 <p>We respect the intellectual property rights of others. It is our policy to respond to any claim that Content posted on Service infringes on the copyright or other intellectual property rights (“Infringement”) of any person or entity.</p>	 	 
 
-<p>If you are a copyright owner, or authorized on behalf of one, and you believe that the copyrighted work has been copied in a way that constitutes copyright infringement, please submit your claim via email to [Your Email], with the subject line: “Copyright Infringement” and include in your claim a detailed description of the alleged Infringement as detailed below, under “DMCA Notice and Procedure for Copyright Infringement Claims”</p>	 	 
+<p>If you are a copyright owner, or authorized on behalf of one, and you believe that the copyrighted work has been copied in a way that constitutes copyright infringement, please submit your claim via email to  i@rusin7.com , with the subject line: “Copyright Infringement” and include in your claim a detailed description of the alleged Infringement as detailed below, under “DMCA Notice and Procedure for Copyright Infringement Claims”</p>	 	 
 
 <p>You may be held accountable for damages (including costs and attorneys’ fees) for misrepresentation or bad-faith claims on the infringement of any Content found on and/or through Service on your copyright.</p>	 	 
 
@@ -107,17 +107,17 @@ back: '/terms/list'
 
 <p>0.6. a statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the copyright owner or authorized to act on the copyright owner’s behalf.</p>	 	 
 
-<p>You can contact our Copyright Agent via email at [Your Email].</p>	 	 
+<p>You can contact our Copyright Agent via email at  i@rusin7.com .</p>	 	 
 
 <p>11. <b>Error Reporting and Feedback</b></p>	 	 
 
-<p>You may provide us either directly at [Your Email] or via third party sites and tools with information and feedback concerning errors, suggestions for improvements, ideas, problems, complaints, and other matters related to our Service (“Feedback”). You acknowledge and agree that: (i) you shall not retain, acquire or assert any intellectual property right or other right, title or interest in or to the Feedback; (ii) Company may have development ideas similar to the Feedback; (iii) Feedback does not contain confidential information or proprietary information from you or any third party; and (iv) Company is not under any obligation of confidentiality with respect to the Feedback. In the event the transfer of the ownership to the Feedback is not possible due to applicable mandatory laws, you grant Company and its affiliates an exclusive, transferable, irrevocable, free-of-charge, sub-licensable, unlimited and perpetual right to use (including copy, modify, create derivative works, publish, distribute and commercialize) Feedback in any manner and for any purpose.</p>	 	 
+<p>You may provide us either directly at  i@rusin7.com  or via third party sites and tools with information and feedback concerning errors, suggestions for improvements, ideas, problems, complaints, and other matters related to our Service (“Feedback”). You acknowledge and agree that: (i) you shall not retain, acquire or assert any intellectual property right or other right, title or interest in or to the Feedback; (ii) Company may have development ideas similar to the Feedback; (iii) Feedback does not contain confidential information or proprietary information from you or any third party; and (iv) Company is not under any obligation of confidentiality with respect to the Feedback. In the event the transfer of the ownership to the Feedback is not possible due to applicable mandatory laws, you grant Company and its affiliates an exclusive, transferable, irrevocable, free-of-charge, sub-licensable, unlimited and perpetual right to use (including copy, modify, create derivative works, publish, distribute and commercialize) Feedback in any manner and for any purpose.</p>	 	 
 
 <p>12. <b>Links To Other Web Sites</b></p>	 	 
 
-<p>Our Service may contain links to third party web sites or services that are not owned or controlled by [Your Name].</p>	 	 
+<p>Our Service may contain links to third party web sites or services that are not owned or controlled by ruyingsuixing.</p>	 	 
 
-<p>[Your Name] has no control over, and assumes no responsibility for the content, privacy policies, or practices of any third party web sites or services. We do not warrant the offerings of any of these entities/individuals or their websites.</p>	 	 
+<p>ruyingsuixing has no control over, and assumes no responsibility for the content, privacy policies, or practices of any third party web sites or services. We do not warrant the offerings of any of these entities/individuals or their websites.</p>	 	 
 
 <p>YOU ACKNOWLEDGE AND AGREE THAT COMPANY SHALL NOT BE RESPONSIBLE OR LIABLE, DIRECTLY OR INDIRECTLY, FOR ANY DAMAGE OR LOSS CAUSED OR ALLEGED TO BE CAUSED BY OR IN CONNECTION WITH USE OF OR RELIANCE ON ANY SUCH CONTENT, GOODS OR SERVICES AVAILABLE ON OR THROUGH ANY SUCH THIRD PARTY WEB SITES OR SERVICES.</p>	 	 
 
@@ -175,6 +175,6 @@ back: '/terms/list'
 
 <p>21. <b>Contact Us</b></p>	 	 
 
-<p>Please send your feedback, comments, requests for technical support by email: <b>[Your Email]</b>.</p>
+<p>Please send your feedback, comments, requests for technical support by email: <b> i@rusin7.com </b>.</p>
 
-<p style="margin-top: 5em; font-size: 0.7em;">These <a href="https://policymaker.io/terms-and-conditions/">Terms of Service</a> were created for <b>[Your Domain]</b> by <a href="https://policymaker.io">PolicyMaker.io</a> on 2030-12-31.</p>	 	 
+<p style="margin-top: 5em; font-size: 0.7em;">These <a href="https://policymaker.io/terms-and-conditions/">Terms of Service</a> were created for <b>blog.rusin7.com</b> by <a href="https://policymaker.io">PolicyMaker.io</a> on 2026-08-06.</p>	 	 

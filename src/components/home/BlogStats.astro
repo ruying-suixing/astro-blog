@@ -10,6 +10,17 @@ interface BlogStatsProps {
 const { blogStartDate } = Astro.props as BlogStatsProps
 const startDate = blogStartDate
 
+// 检测当前语言
+const isEnglish = Astro.url.pathname.includes('/en')
+
+// 多语言标签
+const labels = {
+  daysOnline: isEnglish ? 'Days Online' : '运行天数',
+  lastUpdated: isEnglish ? 'Last Updated' : '最后更新',
+  totalWords: isEnglish ? 'Total Words' : '总字数',
+  totalPosts: isEnglish ? 'Total Posts' : '文章总数'
+}
+
 const allPosts = await getBlogCollection()
 const sortedPosts = sortMDByDate(allPosts)
 
@@ -43,6 +54,7 @@ const formatNumber = (num: number) => {
 }
 
 const formatDate = (date: Date) => {
+  // 可以基于语言切换日期格式，但保持英文格式更简洁
   return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'short',
@@ -57,7 +69,7 @@ const formatDate = (date: Date) => {
       <Icon name="time" class="size-5 text-muted-foreground group-hover:text-primary transition-colors" />
       <div class="text-center">
         <div class="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">{daysDiff}</div>
-        <div class="text-sm text-muted-foreground">Days Online</div>
+        <div class="text-sm text-muted-foreground">{labels.daysOnline}</div>
       </div>
     </div>
     
@@ -65,7 +77,7 @@ const formatDate = (date: Date) => {
       <Icon name="calendar" class="size-5 text-muted-foreground group-hover:text-primary transition-colors" />
       <div class="text-center">
         <div class="text-sm font-medium text-foreground group-hover:text-primary transition-colors">{formatDate(lastUpdated)}</div>
-        <div class="text-sm text-muted-foreground">Last Updated</div>
+        <div class="text-sm text-muted-foreground">{labels.lastUpdated}</div>
       </div>
     </div>
     
@@ -73,13 +85,13 @@ const formatDate = (date: Date) => {
       <Icon name="document" class="size-5 text-muted-foreground group-hover:text-primary transition-colors" />
       <div class="text-center">
         <div class="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">{formatNumber(totalWords)}</div>
-        <div class="text-sm text-muted-foreground">Total Words</div>
+        <div class="text-sm text-muted-foreground">{labels.totalWords}</div>
       </div>
     </div>
   </div>
   
   <div class="flex items-center justify-between text-sm border-t border-border pt-3">
-    <span class="text-muted-foreground">Total Posts</span>
+    <span class="text-muted-foreground">{labels.totalPosts}</span>
     <span class="font-medium text-foreground">{allPosts.length}</span>
   </div>
-</div> 
+</div>
