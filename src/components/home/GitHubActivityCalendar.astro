@@ -68,21 +68,11 @@ function groupByWeeks(activities: Array<GitHubActivityDay>) {
   return [...Array(numberOfWeeks).keys()].map((i) => padded.slice(i * 7, i * 7 + 7))
 }
 
-function getMonthLabels(weeks: Array<Array<GitHubActivityDay>>) {
-  const monthNames = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec'
-  ]
+function getMonthLabels(weeks: Array<Array<GitHubActivityDay>>, isEnglish: boolean) {
+  const monthNames = isEnglish
+    ? ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    : ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
+  
   return weeks.reduce<{ weekIndex: number; label: string }[]>((labels, week, weekIndex) => {
     const firstActivity = week.find((a) => a)
     if (!firstActivity) return labels
@@ -97,6 +87,9 @@ function getMonthLabels(weeks: Array<Array<GitHubActivityDay>>) {
 const { username } = Astro.props as Props
 const data = await fetchData(username)
 
+const pathSegments = Astro.url.pathname.split('/').filter(Boolean)
+const isEnglish = pathSegments[0] === 'en'
+
 const activities = data.contributions
 const totalCount = data.total.lastYear
 const activityYear = getYear(parseISO(activities[0].date))
@@ -110,7 +103,13 @@ const labelHeight = fontSize + labelMargin
 const weeks = groupByWeeks(activities)
 const width = weeks.length * (blockSize + blockMargin) - blockMargin
 const height = labelHeight + (blockSize + blockMargin) * 7 - blockMargin
-const monthLabels = getMonthLabels(weeks)
+const monthLabels = getMonthLabels(weeks, isEnglish)
+
+const labels = {
+  contributions: isEnglish ? 'contributions in' : '次贡献于',
+  less: isEnglish ? 'Less' : '少',
+  more: isEnglish ? 'More' : '多'
+}
 ---
 
 <div class="overflow-x-auto w-full" style="max-width: 90vw;">
@@ -162,9 +161,9 @@ const monthLabels = getMonthLabels(weeks)
   </svg>
 </div>
 <footer class='flex items-center justify-between'>
-  <div>{totalCount} contributions in {activityYear} ~ {activityYear + 1}</div>
+  <div>{totalCount} {labels.contributions} {activityYear} ~ {activityYear + 1}</div>
   <div class='flex items-center gap-1'>
-    <span>Less</span>
+    <span>{labels.less}</span>
     {
       [0, 1, 2, 3, 4].map((level) => (
         <svg width={blockSize} height={blockSize}>
@@ -184,6 +183,6 @@ const monthLabels = getMonthLabels(weeks)
         </svg>
       ))
     }
-    <span>More</span>
+    <span>{labels.more}</span>
   </div>
 </footer>
